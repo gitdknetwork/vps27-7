@@ -2,7 +2,7 @@ name: Continuous Persistent VPS
  
 on:
   schedule:
-    - cron: '0/365 * * * *'  # Every 6 hours
+    - cron: '/365 * * * *'  # Every 6 hours
   workflow_dispatch:
  
 jobs:
