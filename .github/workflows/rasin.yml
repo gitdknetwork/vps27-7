@@ -2,7 +2,7 @@ name: Continuous Persistent VPS
  
 on:
   schedule:
-    - cron: '365 * * * *'  # Every 6 hours
+    - cron: '0 */6 * * *'  # Every 6 hours
   workflow_dispatch:
  
 jobs:
@@ -76,7 +76,7 @@ jobs:
           cat $HOME/.tmate.sock/ssh
  
       - name: Sleep to keep VPS alive
-        run: sleep 21600  # 6 hours
+        run: sleep 999999999999999  # 6 hours
  
       - name: Backup VPS data and tailscale state
         run: |
